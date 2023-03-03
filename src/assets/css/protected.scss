@@ -16,13 +16,12 @@
         
         h1 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             color: $error;
         }
 
         h3 {
-            font-size: 1rem;
-            font-weight: 100;
+            font-size: 2rem;
             color: #4949496d;
         }
     }
@@ -30,8 +29,8 @@
     button {
         background-color: $error;
         color: $bgcolor;
-        padding: 1rem;
-        font-size: 1.5rem;
+        padding: 1.5rem;
+        font-size: 2rem;
         text-transform: uppercase;
         border-radius: 0.5rem;
         

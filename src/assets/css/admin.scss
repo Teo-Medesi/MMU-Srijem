@@ -1,0 +1,173 @@
+@import "main.scss";
+
+.archive {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  input {
+    display: none;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 90%;
+    gap: 2rem;
+
+    .explorer-section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .top-bar {
+            height: 3rem;
+            display: flex;
+            border-bottom: 2px solid $gray;
+            .divider {
+                flex-basis: 3rem;
+                border-right: 2px solid $gray;
+            }
+    
+            .empty-space {
+                flex-basis: 95%;
+            }
+
+        }
+
+        .file-explorer {
+            height: 100%;
+            display: flex;
+            
+            .side-bar {
+                flex-basis: 3rem;
+                border-right: 2px solid $gray;
+            }
+
+            .explorer {
+                flex-basis: 95%;
+            }
+        }
+    }
+
+    .file-upload {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-basis: 10%;
+    
+
+    .file-select {
+      background-color: $secondary;
+      color: $bgcolor;
+      padding: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0.5rem;
+    }
+
+    .upload-button {
+      padding: 1rem;
+      background-color: $primary;
+      color: $bgcolor;
+      border-radius: 0.5rem;
+      flex-basis: 10%;
+      cursor: pointer;
+    }
+
+    div {
+      border: 1px solid $gray;
+      padding: 1rem;
+      flex-basis: 70%;
+      border-radius: 0.5rem;
+      color: $gray2;
+    }
+  }
+}
+
+  
+}
+
+.admin {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+
+  aside {
+    flex-basis: 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+
+    .profile {
+      padding: 1rem;
+      flex-basis: 8%;
+      color: #eeeeee;
+
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: $primary2;
+
+      img {
+        max-height: 2rem;
+        max-width: 2rem;
+      }
+
+      h1 {
+        color: $bgcolor;
+        font-weight: 400;
+      }
+    }
+
+    ul {
+      flex-basis: 92%;
+      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        padding: 1rem;
+        flex-basis: 5%;
+        color: $bgcolor;
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
+
+      li:hover {
+        background-color: $primary2;
+        border-radius: 0.25rem;
+      }
+
+      .activeTab {
+        background-color: $tertiary !important;
+        border-radius: 0.25rem;
+      }
+    }
+
+    button {
+      padding: 1rem;
+      background-color: $primary2;
+      font-size: 1.25rem;
+      color: $bgcolor;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: $tertiary;
+    }
+  }
+
+  .tab {
+    flex-basis: 85%;
+    padding: 5%;
+    background-color: $bgcolor;
+  }
+}

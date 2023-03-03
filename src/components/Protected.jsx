@@ -1,14 +1,14 @@
-import React, { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../App"
-import "../assets/css/protected.scss"
 import Footer from "./Footer";
+import "../assets/css/protected.scss"
 
 const Protected = ({ children }) => {
-    const user = useContext(UserContext);
+    const [user, setUser] = useContext(UserContext);
     const navigate = useNavigate();
 
-    if (user != null) {
+    if (user != null && user !== 0) {
         return children;
     }
     else {

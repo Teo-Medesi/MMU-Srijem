@@ -1,24 +1,39 @@
 $bgcolor: #EEEEEE;
 $primary: #002747;
+$primary2: #00345f;
 $secondary: #e59d2c;
 $tertiary: #0E7995;
 
 $gray: #c3c3c3;
+$gray2: #9c9c9c;
 $error: #E40613;
 
 * {
     margin: 0;
     padding: 0;
+    border: none;
     outline: none;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+.hidden {
+    display: none;
+}
+
+.error-text {
+    color: $error;
+    font-style: italic;
 }
 
 footer {
     height: 10vh;
+    background-color: $bgcolor;
     display: flex;
     align-items: center;
     justify-content: center;

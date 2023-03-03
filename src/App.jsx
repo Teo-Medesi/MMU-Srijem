@@ -5,18 +5,29 @@ import { Route, Routes } from "react-router-dom";
 import Admin from "./pages/Admin";
 import SignIn from "./pages/SignIn";
 import Protected from "./components/Protected";
+import { auth } from "./firebase.config";
+import { onAuthStateChanged } from "firebase/auth";
 
 export const UserContext = createContext();
 export const LanguageContext = createContext();
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(0);
   const [lang, setLang] = useState("croatian");
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setUser(user);
+    }
+    else {
+      setUser(null);
+    }
+  });
   
   return (
     <div className="App">
-      <UserContext.Provider value={user}>
-        <LanguageContext.Provider value={lang}>
+      <UserContext.Provider value={[user, setUser]}>
+        <LanguageContext.Provider value={[lang, setLang]}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Protected><Admin /></Protected>} />

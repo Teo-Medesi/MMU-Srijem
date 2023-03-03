@@ -11,12 +11,12 @@
         width: 40%;
         display: flex;
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 2rem;
 
-        div {
+        .signIn {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 2rem;
 
             input {
                 padding: 0.5rem;
@@ -30,6 +30,7 @@
             h1 {
                 font-size: 2.5rem;
                 text-align: center;
+                color: black;
             }    
         }
 
@@ -37,6 +38,7 @@
             padding: 1rem 0;
             border: none;
             color: $bgcolor;
+            cursor: pointer;
             background-color: $primary;
             border-radius: 0.25rem;
         }
