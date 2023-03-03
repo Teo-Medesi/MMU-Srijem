@@ -3,10 +3,11 @@ import Home from "./pages/home";
 import "./assets/css/main.scss"
 import { Route, Routes } from "react-router-dom";
 import Admin from "./pages/Admin";
-import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 import Protected from "./components/Protected";
 
 export const UserContext = createContext();
+export const LanguageContext = createContext();
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -15,11 +16,13 @@ const App = () => {
   return (
     <div className="App">
       <UserContext.Provider value={user}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/admin" element={<Protected><Admin /></Protected>} />
-          <Route path="/signUp" element={<SignUp />} />
-        </Routes>
+        <LanguageContext.Provider value={lang}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/admin" element={<Protected><Admin /></Protected>} />
+            <Route path="/signIn" element={<SignIn />} />
+          </Routes>
+        </LanguageContext.Provider>
       </UserContext.Provider>
     </div>
   )

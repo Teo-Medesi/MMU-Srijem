@@ -1,6 +1,6 @@
 @import "main.scss";
 
-.container {
+.restricted-container {
     background-color: $bgcolor;
     height: 90vh;
     display: flex;
@@ -16,12 +16,13 @@
         
         h1 {
             text-align: center;
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             color: $error;
         }
 
         h3 {
-            font-size: 2rem;
+            font-size: 1rem;
+            font-weight: 100;
             color: #4949496d;
         }
     }
@@ -29,8 +30,8 @@
     button {
         background-color: $error;
         color: $bgcolor;
-        padding: 1.5rem;
-        font-size: 2rem;
+        padding: 1rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
         border-radius: 0.5rem;
         
@@ -39,13 +40,4 @@
 
     }
 
-}
-
-footer {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    border-top: 2px solid $gray;
 }

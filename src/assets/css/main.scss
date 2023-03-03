@@ -16,3 +16,12 @@ $error: #E40613;
     text-decoration: none;
     list-style: none;
 }
+
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    border-top: 2px solid $gray;
+}
