@@ -11,6 +11,14 @@ const Protected = ({ children }) => {
     if (user != null && user !== 0) {
         return children;
     }
+    else if (user === 0)
+    {
+        return (
+            <div className="loading">
+                <span></span>
+            </div>
+        )
+    }
     else {
         return (
             <>

@@ -25,7 +25,6 @@ const Admin = () => {
     <div className="admin">
       <aside>
         <div className="profile">
-          <img src={profile} />
           <h1>{user.email}</h1>
         </div>
 

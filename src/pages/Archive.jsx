@@ -10,6 +10,10 @@ const Archive = () => {
     }
   };
 
+  const handleUpload = () => {
+    
+  }
+
   return (
     <div className="archive">
       <h1>Archive</h1>

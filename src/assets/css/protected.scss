@@ -1,5 +1,27 @@
 @import "main.scss";
 
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bgcolor;
+
+    span {
+        width: 11rem;
+        height: 11rem;
+        background-color: $bgcolor;
+        border: 1.5rem solid $primary2;
+        border-top: 1.5rem solid $primary;
+        border-right: 1.5rem solid $secondary;
+        border-bottom: 1.5rem solid $tertiary;
+        border-radius: 100%;
+        animation: spin 1s linear infinite;    
+        
+    }
+}
+
 .restricted-container {
     background-color: $bgcolor;
     height: 90vh;

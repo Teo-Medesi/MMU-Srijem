@@ -40,3 +40,12 @@ footer {
     width: 100vw;
     border-top: 2px solid $gray;
 }
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
