@@ -1,6 +1,7 @@
 @import "main.scss";
 
 .archive {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -28,14 +29,19 @@
         .top-bar {
             height: 3rem;
             display: flex;
-            border-bottom: 2px solid $gray;
+            border-bottom: 1px solid $gray;
             .divider {
                 flex-basis: 3rem;
-                border-right: 2px solid $gray;
+                border-right: 1px solid $gray;
             }
     
             .empty-space {
                 flex-basis: 95%;
+                font-size: 1.5rem;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                color: $gray2;
             }
 
         }
@@ -46,11 +52,44 @@
             
             .side-bar {
                 flex-basis: 3rem;
-                border-right: 2px solid $gray;
+                border-right: 1px solid $gray;
             }
 
             .explorer {
                 flex-basis: 95%;
+                color: $black1;
+                
+                .file {
+                  cursor: pointer;
+                  width: 100%;
+                  padding: 1rem;
+                  border-bottom: 1px solid $gray;
+                  display: flex;
+                  gap: 0.5rem;
+                  align-items: center;
+                  font-size: 1.25rem;
+                  
+                  img {
+                    width: 2.25rem;
+                    height: 2.25rem;
+                  }
+                }
+
+                .folder {
+                  cursor: pointer;
+                  width: 100%;
+                  padding: 1rem;
+                  border-bottom: 1px solid $gray;
+                  display: flex;
+                  gap: 0.75rem;
+                  align-items: center;
+                  font-size: 1.25rem;
+
+                  img {
+                    width: 2rem;
+                    height: 2rem;
+                  }
+                }
             }
         }
     }
