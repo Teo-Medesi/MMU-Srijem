@@ -50,3 +50,58 @@ footer {
         transform: rotate(360deg);
     }
 }
+
+.delete-modal {
+    font-family: "Golos Text", sans-serif;
+    background-color: rgb(0,0,0, 0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+        background-color: $bgcolor;
+        width: 30%;
+        height: 28%;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: $error;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .button-section {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                border-radius: 0.5rem;
+                padding: 1rem 4rem;
+                color: white;
+            }
+
+            .yes-button {
+                background-color: $error;
+            }
+
+            .no-button {
+                background-color: $gray;
+            }
+            
+        }
+
+    }
+}

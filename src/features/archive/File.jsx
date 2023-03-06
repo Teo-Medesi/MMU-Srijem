@@ -1,6 +1,7 @@
 import fileIcon from "../../assets/icons/file.svg"
 import imageIcon from "../../assets/icons/image.svg"
 import audioIcon from "../../assets/icons/audio.svg"
+import closeIcon from "../../assets/icons/close.svg"
 
 const Icon = ({name}) => {
 
@@ -23,8 +24,12 @@ const Icon = ({name}) => {
 const File = ({fileRef}) => {
   return (
     <div className="file">
-        <Icon name={fileRef.name} />
-        <p>{fileRef.name}</p>
+        <div>
+            <Icon name={fileRef.name} />
+            <p>{fileRef.name}</p>
+            
+        </div>
+        <img src={closeIcon} className="close"/>
     </div>
   )
 }

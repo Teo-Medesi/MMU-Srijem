@@ -65,13 +65,23 @@
                   padding: 1rem;
                   border-bottom: 1px solid $gray;
                   display: flex;
-                  gap: 0.5rem;
+                  justify-content: space-between;
                   align-items: center;
                   font-size: 1.25rem;
-                  
+
+                  .close:hover {
+                    background-color: $gray;
+                    border-radius: 100%;
+                  }
+
+                  div {
+                    display: flex;
+                    gap: 0.5rem;
+                  }
+
                   img {
-                    width: 2.25rem;
-                    height: 2.25rem;
+                    width: 2rem;
+                    height: 2rem;
                   }
                 }
 
@@ -81,9 +91,20 @@
                   padding: 1rem;
                   border-bottom: 1px solid $gray;
                   display: flex;
-                  gap: 0.75rem;
+                  justify-content: space-between;
                   align-items: center;
                   font-size: 1.25rem;
+
+                  div {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                  }
+
+                  .close:hover {
+                    background-color: $gray;
+                    border-radius: 100%;
+                  }
 
                   img {
                     width: 2rem;
