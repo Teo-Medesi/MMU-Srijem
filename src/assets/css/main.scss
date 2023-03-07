@@ -24,7 +24,7 @@ $error: #E40613;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .error-text {
@@ -64,10 +64,14 @@ footer {
     align-items: center;
 
     .modal {
+        border-top: 4px solid $error;
         background-color: $bgcolor;
         width: 30%;
         height: 28%;
-        border-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-top-right-radius: 0.25rem;
+        border-top-left-radius: 0.25rem;
         padding: 2rem;
         display: flex;
         flex-direction: column;
@@ -81,6 +85,7 @@ footer {
 
         h3 {
             text-align: center;
+            color: $black1;
         }
 
         .button-section {
@@ -91,6 +96,13 @@ footer {
                 border-radius: 0.5rem;
                 padding: 1rem 4rem;
                 color: white;
+                cursor: pointer;
+                border: 1px solid $gray2;
+
+                button:hover {
+                    filter: brightness(75)
+                }
+                
             }
 
             .yes-button {
@@ -98,10 +110,17 @@ footer {
             }
 
             .no-button {
-                background-color: $gray;
+                background-color: $gray2;
             }
             
         }
 
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .modal {
+        width: 50%;
+        height: 50%;
     }
 }

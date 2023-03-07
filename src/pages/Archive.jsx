@@ -1,9 +1,11 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, createContext } from "react";
 import { listAll, ref } from "firebase/storage"
 import { storage } from "../firebase.config" 
 import File from "../features/archive/File";
 import Folder from "../features/archive/Folder";
 import DeleteModal from "../components/DeleteModal";
+
+export const ArchiveContext = createContext();
 
 const Archive = () => {
   const [file, setFile] = useState(0);
@@ -36,8 +38,7 @@ const Archive = () => {
   }
 
   return (
-    <>
-    <DeleteModal />
+    <ArchiveContext.Provider value={fetchArchive}>
     <div className="archive">
       <h1>Archive</h1>
       <article>
@@ -75,7 +76,7 @@ const Archive = () => {
 
       </article>
     </div>
-    </>
+    </ArchiveContext.Provider>
   );
 };
 
