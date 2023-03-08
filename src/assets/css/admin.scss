@@ -35,6 +35,7 @@
         .empty-space {
           flex-basis: 95%;
           display: flex;
+          justify-content: space-between;
           align-items: center;
 
           input {
@@ -44,6 +45,12 @@
             color: $gray2;
             font-size: 1.25rem;
             padding: 0 1rem;
+          }
+
+          img {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
           }
         }
       }
@@ -91,6 +98,7 @@
           }
 
           .folder {
+            background-color: $bgcolor;
             cursor: pointer;
             user-select: none;
             width: 100%;

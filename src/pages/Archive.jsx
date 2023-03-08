@@ -3,7 +3,7 @@ import { listAll, ref, uploadBytes } from "firebase/storage"
 import { storage } from "../firebase.config" 
 import File from "../features/archive/File";
 import Folder from "../features/archive/Folder";
-import DeleteModal from "../components/DeleteModal";
+import arrow from "../assets/icons/arrow.svg"
 
 export const ArchiveContext = createContext();
 
@@ -67,6 +67,11 @@ const Archive = () => {
 
   }
 
+  const goToPreviousDirectory = () => {
+    const storageRef = ref(storage, storagePath);
+    setStoragePath(storageRef.parent.fullPath);
+  }
+
   const handleDrop = event => {
 
     // the default on drop action is to open the file in the browser thefore we prevent it
@@ -109,6 +114,7 @@ const Archive = () => {
             <div className="divider"></div>
             <div className="empty-space">
               <input type="text" onChange={event => setStoragePath(event.target.value)} value={storagePath} />
+              <img src={arrow} onClick={goToPreviousDirectory} />
             </div>
           </div>
 

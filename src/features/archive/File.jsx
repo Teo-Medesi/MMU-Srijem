@@ -34,8 +34,12 @@ const File = ({ fileRef }) => {
     })
   };
 
+  const openFile = () => {
+    
+  }
+
   return (
-    <div className="file">
+    <div onDoubleClick={openFile} className="file">
       <DeleteModal
         onDelete={onDelete}
         isActiveProp={[isDeleteModalActive, setIsDeleteModalActive]}
