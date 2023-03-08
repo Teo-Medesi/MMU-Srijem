@@ -27,6 +27,10 @@ $error: #E40613;
     display: none !important;
 }
 
+.faded {
+    filter: brightness(80%);
+}
+
 .error-text {
     color: $error;
     font-style: italic;

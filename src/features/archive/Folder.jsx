@@ -1,16 +1,17 @@
-import { useState } from "react"
-import DeleteModal from "../../components/DeleteModal"
-import folderLogo from "../../assets/icons/folder.svg"
-import closeIcon from "../../assets/icons/close.svg"
 import { useContext } from "react"
 import { ArchiveContext } from "../../pages/Archive"
-import { deleteObject } from "firebase/storage"
+import folderLogo from "../../assets/icons/folder.svg"
 
 const Folder = ({folderRef}) => {
-  const fetchArchive = useContext(ArchiveContext);
+  const {storagePathState} = useContext(ArchiveContext);
+  const [storagePath, setStoragePath] = storagePathState;
+
+  const handleDoubleClick = () => {
+    setStoragePath(folderRef.fullPath);
+  }
 
   return (
-    <div className="folder"> 
+    <div onDoubleClick={handleDoubleClick} className="folder"> 
         <div>
           <img src={folderLogo} />
           <p>{folderRef.name}</p>

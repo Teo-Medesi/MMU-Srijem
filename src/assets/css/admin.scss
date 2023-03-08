@@ -11,10 +11,6 @@
     font-size: 3rem;
   }
 
-  input {
-    display: none;
-  }
-
   article {
     display: flex;
     flex-direction: column;
@@ -22,135 +18,156 @@
     gap: 2rem;
 
     .explorer-section {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .top-bar {
+        height: 3rem;
+        display: flex;
+        border-bottom: 1px solid $gray;
+
+        .divider {
+          flex-basis: 3rem;
+          border-right: 1px solid $gray;
+        }
+
+        .empty-space {
+          flex-basis: 95%;
+          display: flex;
+          align-items: center;
+
+          input {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: $gray2;
+            font-size: 1.25rem;
+            padding: 0 1rem;
+          }
+        }
+      }
+
+      .file-explorer {
         height: 100%;
         display: flex;
-        flex-direction: column;
 
-        .top-bar {
-            height: 3rem;
-            display: flex;
+        .side-bar {
+          flex-basis: 3rem;
+          border-right: 1px solid $gray;
+        }
+
+        .explorer {
+          background-color: $bgcolor;
+          flex-basis: 95%;
+          color: $black1;
+
+          .file {
+            cursor: pointer;
+            user-select: none;
+            width: 100%;
+            padding: 1rem;
             border-bottom: 1px solid $gray;
-            .divider {
-                flex-basis: 3rem;
-                border-right: 1px solid $gray;
-            }
-    
-            .empty-space {
-                flex-basis: 95%;
-                font-size: 1.5rem;
-                padding: 0 1rem;
-                display: flex;
-                align-items: center;
-                color: $gray2;
-            }
-
-        }
-
-        .file-explorer {
-            height: 100%;
             display: flex;
-            
-            .side-bar {
-                flex-basis: 3rem;
-                border-right: 1px solid $gray;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.25rem;
+
+            .close:hover {
+              background-color: $gray;
+              border-radius: 100%;
             }
 
-            .explorer {
-                flex-basis: 95%;
-                color: $black1;
-                
-                .file {
-                  cursor: pointer;
-                  width: 100%;
-                  padding: 1rem;
-                  border-bottom: 1px solid $gray;
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  font-size: 1.25rem;
-
-                  .close:hover {
-                    background-color: $gray;
-                    border-radius: 100%;
-                  }
-
-                  div {
-                    display: flex;
-                    gap: 0.5rem;
-                  }
-
-                  img {
-                    width: 2rem;
-                    height: 2rem;
-                  }
-                }
-
-                .folder {
-                  cursor: pointer;
-                  width: 100%;
-                  padding: 1rem;
-                  border-bottom: 1px solid $gray;
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  font-size: 1.25rem;
-
-                  div {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.75rem;
-                  }
-
-                  .close:hover {
-                    background-color: $gray;
-                    border-radius: 100%;
-                  }
-
-                  img {
-                    width: 2rem;
-                    height: 2rem;
-                  }
-                }
+            div {
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
             }
+
+            img {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+
+          .folder {
+            cursor: pointer;
+            user-select: none;
+            width: 100%;
+            padding: 1rem;
+            border-bottom: 1px solid $gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.25rem;
+
+            div {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem;
+            }
+
+            .close:hover {
+              background-color: $gray;
+              border-radius: 100%;
+            }
+
+            img {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
         }
+      }
     }
 
     .file-upload {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-basis: 10%;
-    
-
-    .file-select {
-      background-color: $secondary;
-      color: $bgcolor;
-      padding: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 0.5rem;
-    }
-
-    .upload-button {
-      padding: 1rem;
-      background-color: $primary;
-      color: $bgcolor;
-      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
       flex-basis: 10%;
-      cursor: pointer;
-    }
 
-    div {
-      border: 1px solid $gray;
-      padding: 1rem;
-      flex-basis: 70%;
-      border-radius: 0.5rem;
-      color: $gray2;
+      .file-select {
+        background-color: $secondary;
+        color: $bgcolor;
+        padding: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 0.5rem;
+      }
+
+      .upload-button {
+        padding: 1rem;
+        background-color: $primary;
+        color: $bgcolor;
+        border-radius: 0.5rem;
+        flex-basis: 10%;
+        cursor: pointer;
+      }
+
+      div {
+        border: 1px solid $gray;
+        padding: 1rem;
+        height: 100%;
+        flex-basis: 60%;
+        border-radius: 0.5rem;
+        color: $gray2;
+      }
+
+
+
+      span {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 7px solid $gray;
+        border-top: 7px solid $primary;
+        border-radius: 100%;
+        
+        animation: spin 1s linear infinite;
+      }
     }
   }
-}
-
-  
 }
 
 .admin {

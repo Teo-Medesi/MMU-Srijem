@@ -22,7 +22,7 @@ const Icon = ({ name }) => {
 
 const File = ({ fileRef }) => {
   const [isDeleteModalActive, setIsDeleteModalActive] = useState(false);
-  const fetchArchive = useContext(ArchiveContext);
+  const {fetchArchive} = useContext(ArchiveContext);
 
   const onDelete = () => {
     setIsDeleteModalActive(false);
