@@ -7,6 +7,8 @@ import SignIn from "./pages/SignIn";
 import Protected from "./components/Protected";
 import { auth } from "./firebase.config";
 import { onAuthStateChanged } from "firebase/auth";
+import Test from "./pages/Test";
+import WebPlayer from "./pages/WebPlayer";
 
 export const UserContext = createContext();
 export const LanguageContext = createContext();
@@ -32,6 +34,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Protected><Admin /></Protected>} />
             <Route path="/signIn" element={<SignIn />} />
+            <Route path="/test" element={<Test />} />
+            <Route path="/web-player" element={<WebPlayer />} />
           </Routes>
         </LanguageContext.Provider>
       </UserContext.Provider>

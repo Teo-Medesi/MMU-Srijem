@@ -1,9 +1,7 @@
 import "../assets/css/home.scss"
 import logo from "../assets/svgs/ALTER_1.svg"
 import croatia from "../assets/icons/croatia.png"
-import usa from "../assets/icons/usa.png"
-import ruthenia from "../assets/icons/rusyn.png"
-import playIcon from "../assets/icons/play.svg"
+import { Link } from "react-router-dom"
 
 const Home = () => {
 
@@ -32,8 +30,8 @@ const Home = () => {
         </div>
         <div className="header-player">
           <section>
-            <img src={playIcon} alt="play button" />
-            <h1>Song name</h1>
+            <Link to="/web-player" className="player-button">web player</Link>
+            <Link className="bogdanovci-button">općina bogdanovci</Link>
           </section>
         </div>
       </header>

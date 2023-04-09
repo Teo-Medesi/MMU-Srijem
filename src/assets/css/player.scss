@@ -1,0 +1,66 @@
+@import "main.scss";
+
+.player-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary;
+
+  .player {
+    padding: 2rem;
+    background-color: $primary2;
+    width: 50%;
+    height: 80%;
+    border-radius: 0.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .button-row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .song-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      img {
+        height: 20rem;
+        width: 24rem;
+        border-radius: 0.25rem;
+      }
+    }
+
+    button {
+      padding: 1rem 4rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      background-color: $secondary;
+      color: white;
+      font-size: 1.25rem;
+    }
+
+    .mute-button {
+      background-color: transparent;
+      border: $secondary 2px solid;
+      color: $secondary;
+    }    
+
+    .mute-button:hover {
+      background-color: $tertiary;
+      color: white;
+    }
+
+    
+
+  }
+
+}
